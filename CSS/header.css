@@ -1,0 +1,264 @@
+/* Quy tắc chung */
+:root {
+    --mau-Nen: rgb(0, 95, 162);
+    --mau_btn: rgb(249, 189, 36);
+}
+
+body {
+    width: 100%;
+    margin: 0 !important;
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--mau-Nen);
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    border-radius: 0px !important;
+    margin-top:5px ;
+}
+.menu_Cap1{
+    display: none;
+}
+.menu ul li{
+    margin: 0px;
+    width: 100%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 12px;
+}
+.menu_Cap2{
+    display: flex;
+    flex-direction: column
+}
+.navbar-collapse{
+    width: 80%;
+}
+.navbar {
+    padding: 0 5%;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.icon_header {
+    font-size: 15px;
+    color: white;
+    margin-right: 3px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.navbar-nav{
+    margin: 0 !important;
+    width: 80%;
+}
+.navbar-brand{
+    width: 20%;
+}
+
+
+/* Thanh tìm kiếm */
+.input_search {
+    width: 100%;
+    padding: 2px 0px 2px 25px;
+    border: none;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+}
+.search{
+    width: 20%;
+}
+.search-button{
+    width: 0;
+}
+
+
+.search button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: rgba(240, 248, 255, 0.168);
+    top: 100%;
+    display: none !important; 
+}
+
+.dropdown-item {
+    color: white;
+    padding: 5px 10px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.search{
+    position: relative;
+    vertical-align: top;
+}
+.ti-search{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    z-index: 2;
+    color: rgb(148, 148, 148);
+}
+
+/* Nút toggle trên mobile */
+.navbar-toggler {
+    background-color:rgba(149, 149, 149, 0.63);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+/*footer*/
+/***** footer *****/
+.div-container {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--mau-Nen);
+    color: #ffffff;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo_footer {
+    width: 350px;
+    height: 100px;
+}
+
+.div-column {
+    flex: 1;
+    padding: 30px 10px;
+}
+
+.div-column ul {
+    list-style-type: none;
+    padding: 0;
+    display: block !important;
+}
+
+.div-column li {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.text_title a {
+    font-size: 18px;
+    font-weight: 400 !important;
+    color: white;
+}
+
+.div-column li a {
+    font-weight: 100;
+}
+
+.ti-youtube,
+.ti-facebook,
+.ti-twitter-alt,
+.ti-instagram,
+.ti-linkedin,
+.ti-pinterest {
+    margin-right: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(78, 78, 78, 0.369);
+        position: absolute;
+        top: 65px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        left: 0;
+        display: none;
+    }
+    .navbar-nav .nav-item {
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+    .navbar-nav{
+        width: 100%;
+        
+    }
+    .icon_header {
+        display: none;
+    }
+
+    .search {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+    }
+    .search{
+        display: none;
+    }
+    .logo_footer {
+        width: 200px;
+        height: 60px;
+    }
+    .div-container {
+        flex-direction: column;
+    }
+    .div-column {
+        padding: 0px;
+    }
+    
+}
+@media (max-width: 400px) 
+{   .logo img {
+    max-width: 140px;
+}
+    .logo_footer {
+        width: 200px;
+        height: 50px;
+    }
+    
+    .div-column{
+        padding: 0PX;
+    }
+
+    .search{
+        display: none;
+    }
+    
+}

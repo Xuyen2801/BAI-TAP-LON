@@ -1,0 +1,54 @@
+.dau_an{
+    background-image: url(../IMG/dauan.jpg);
+    background-size: cover;
+    height: 500px;
+
+ }  
+ .title{
+    height: 400px;
+    width: 100%;
+ }
+ .img_da{
+    background-image: url(../IMG/baner/lichsu.png);
+    background-size: cover;
+ }
+.name{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    width: 40%;
+
+}
+.text{
+    width: 50%;
+    color: var(--mau-Nen);
+}
+p{ 
+    text-align: justify;
+    line-height: 25px;
+    color: rgb(101, 101, 101);
+}
+.text_info{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10% 15%;
+}
+.quote{
+    background-color:  rgb(183, 183, 183);
+    padding:100px 25%;
+    color: black;
+}
+.quote h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.quote p{
+    font-size: 15px;
+}
+.banner_img{
+    background-image: url(../IMG/baner/dauan.png);
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}

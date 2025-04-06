@@ -1,0 +1,68 @@
+.content{
+    padding-top: 60px;
+}
+.ptr_tinhben{
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10% 15%;
+    background-color:   white;
+}
+p{ 
+    text-align: justify;
+    line-height: 25px;
+}
+.title,.text{
+    width: 50%;
+}
+.bao_Cao1{
+    padding: 10% 30%;
+    margin: 0;
+    color: black;
+}
+h2{
+    font-weight: bolder;
+}
+.bao_Cao1 .img{
+    background-image: url(../IMG/baner/about.png);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 20%;
+    background-color: var(--mau-Nen);
+    
+}
+.bao_Cao2{
+    padding: 10% 30%;
+    background-color: rgb(187, 187, 187);
+}
+@media (max-width: 991px) {
+    
+
+.tinh_ben {
+height: 300px;
+}
+.row{
+    flex-direction: column;
+}
+.title, .text{
+    width: 100%;
+}
+h1{
+    width: 230px;
+}
+.bao_Cao1, .bao_Cao2{
+    padding: 10% 15%;
+    margin: 0;
+    color: black;}
+}
+@media (max-width: 400px) {
+    .bao_Cao1, .bao_Cao2{
+        padding:10px 5px ;}
+    .row{
+        padding: 10% 5px;
+    }
+}

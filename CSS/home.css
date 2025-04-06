@@ -1,0 +1,274 @@
+/* Content Section */
+.content {
+    color: rgb(113, 92, 1);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.back_drop {
+    width: 100%;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.Advertising h3 {
+    margin: 50px 0;
+}
+
+.Advertising {
+    padding: 0 100px;
+}
+
+.pr_demo {
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.text_banner{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    color: azure;
+}
+
+.pr_demo_item {
+    width: 45%;
+}
+
+.pr_demo_item img {
+    width: 100%;
+}
+
+.pr_demo_item p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.bst {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.list_cl {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.collections {
+    width: 30%;
+    text-align: center;
+}
+
+.collections img {
+    width: 50%;
+}
+
+.collections p {
+    margin-top: 10px;
+}
+
+/* Chính sách ưu đãi */
+.chinh_sach {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.cs_item {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    width: 200px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.cs_item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.headphone i {
+    color: #007bff;
+}
+
+.truck i {
+    color: #28a745;
+}
+
+.ticket i {
+    color: #ffc107;
+}
+
+.crown i {
+    color: #17a2b8;
+}
+
+.cs_item h6 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.cs_item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.headphone h6 {
+    color: #007bff;
+}
+
+.ticket h6 {
+    color: #ffc107;
+}
+
+.crown h6 {
+    color: #17a2b8;
+}
+
+.truck h6 {
+    color: #28a745;
+}
+
+/* Sản phẩm bán chạy */
+.sp_ban_chay {
+    padding-bottom: 50px;
+}
+
+.title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: var(--title);
+}
+
+.ds_sp {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    padding: 0 50px;
+}
+
+.sp {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: rgb(248, 248, 248);
+    position: relative;
+}
+
+.sp i.ti-heart {
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.text {
+    text-align: left;
+    width: 60%;
+}
+
+.text h6 {
+    padding-top: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.sp_ptr {
+    width: 80px;
+    height: auto;
+    margin-left: 15px;
+}
+/* ipad */
+@media(max-width: 824px) {
+    .pr_demo_item {
+        width: 100%;
+    }
+    .pr_demo_item img {
+        width: 100%;
+    }
+    .text_banner{
+        font-size: 20px;
+    }
+    .pr_demo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .list_cl {
+        flex-direction: column;
+        align-items: center;
+    }
+    .collections {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .text_banner{
+
+        top: 15%;
+        right: 10%;
+    }
+    .text_banner h1, .text_banner h4{
+        font-size: 15px;
+    }
+    .list_cl{
+        display: none;
+    }
+    .cl_show{
+        display: block;
+    }
+    .collections {
+        width: 100%;
+    }
+    .Advertising {
+        padding: 0;
+    }
+    .chinh_sach{
+        flex-direction: column;
+        padding: 0;
+    }
+    .cs_item {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .ds_sp{
+        flex-direction: column;
+        display: none;
+    }
+    .sp_show{
+        display: block;
+    }
+    .sp {
+       
+        width: 100%;
+        margin-bottom: 20px;}
+    .back_drop{
+        margin-bottom: 30px;
+    }
+    .pr_demo{
+        margin: 0;
+    }
+    h3{
+        margin: 10px 0;
+    }
+}
+

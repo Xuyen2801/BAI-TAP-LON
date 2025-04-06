@@ -193,15 +193,20 @@ li{
 /* Responsive */
 @media (max-width: 991px) {
     .navbar-collapse {
-        background-color: rgba(78, 78, 78, 0.369);
-        position: absolute;
-        top: 65px;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        left: 0;
-        display: none;
+      background-color:var(--mau-Nen);
+      position: absolute;
+      top: 65px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      display: none; /* Mặc định là ẩn */
     }
+  
+    .navbar-collapse.show {
+      display: block; /* Khi có class 'show' thì hiện ra */
+    }
+  
     .navbar-nav .nav-item {
         padding: 10px;
         border-bottom: 1px solid white;

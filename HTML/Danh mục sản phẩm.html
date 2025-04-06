@@ -354,7 +354,14 @@
         </div>
     </div>
 
-    <script src="../JS/bootstrap.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarNav');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('show'); // Khi click vào nút thì toggle class 'show' cho menu
+        });
+
+    </script>
 </body>
 
 </html>

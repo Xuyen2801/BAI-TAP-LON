@@ -26,7 +26,8 @@
     justify-content: space-between;
     margin-bottom: 50px;
 }
-.text_banner{
+
+.text_banner {
     position: absolute;
     top: 50%;
     right: 10%;
@@ -199,76 +200,114 @@
     height: auto;
     margin-left: 15px;
 }
+
 /* ipad */
 @media(max-width: 824px) {
     .pr_demo_item {
         width: 100%;
     }
+
     .pr_demo_item img {
-        width: 100%;
+        width: 80%;
     }
-    .text_banner{
+
+    .text_banner {
         font-size: 20px;
     }
+
     .pr_demo {
-        flex-direction: column;
         align-items: center;
     }
+
     .list_cl {
         flex-direction: column;
         align-items: center;
     }
+
     .collections {
         width: 80%;
         margin-bottom: 20px;
     }
-    .text_banner{
+
+    .text_banner {
 
         top: 15%;
         right: 10%;
     }
-    .text_banner h1, .text_banner h4{
+
+    .text_banner h1,
+    .text_banner h4 {
         font-size: 15px;
     }
-    .list_cl{
+
+    .list_cl {
         display: none;
     }
-    .cl_show{
+
+    .cl_show {
         display: block;
     }
+
     .collections {
         width: 100%;
     }
+
     .Advertising {
         padding: 0;
     }
-    .chinh_sach{
+
+    .chinh_sach {
         flex-direction: column;
         padding: 0;
     }
+
     .cs_item {
         width: 80%;
         margin: 10px auto;
     }
-    .ds_sp{
+
+    .ds_sp {
         flex-direction: column;
         display: none;
     }
-    .sp_show{
+
+    .sp_show {
         display: block;
     }
+
     .sp {
-       
+
         width: 100%;
-        margin-bottom: 20px;}
-    .back_drop{
+        margin-bottom: 20px;
+    }
+
+    .back_drop {
         margin-bottom: 30px;
     }
-    .pr_demo{
+
+    .pr_demo {
         margin: 0;
+        padding: 0 30px;
     }
-    h3{
+
+    h3 {
         margin: 10px 0;
     }
-}
 
+    .pr_demo_item p {
+        font-size: 10px;
+
+    }
+    .back_drop{
+        margin-bottom:0px;
+        margin-top: 18px;
+    }
+    .chinh_sach{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row
+    }
+    .cs_item {
+        width: 45%;
+    }
+}

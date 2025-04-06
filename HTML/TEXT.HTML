@@ -1,370 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/Danh_muc.css">
-    <link rel="stylesheet" href="../icon/themify-icons-font/themify-icons/themify-icons.css" />
-    <link rel="icon" href="../IMG/logo_http-removebg-preview.png" type="image/x-icon">
-    <title>Danh mục</title>
+    <title>Giỏ Hàng</title>
     <style>
-        .list_item {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Khoảng cách giữa các item */
-            padding: 20px; /* Thêm padding cho vùng chứa sản phẩm */
-        }
-
-        .item {
-            /* Tính toán chiều rộng ban đầu để có khoảng 4 item trên một dòng */
-            width: calc(25% - 20px); /* 25% trừ đi gap */
-            box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước */
-            border: 1px solid #ccc; /* Thêm border để dễ nhìn (tùy chọn) */
-            padding: 15px; /* Thêm padding cho mỗi item (tùy chọn) */
-            text-align: center; /* Căn giữa nội dung (tùy chọn) */
-        }
-
-        /* Media query cho màn hình hẹp hơn (ví dụ: chiều rộng tối đa 992px) */
-        @media (max-width: 992px) {
-            .item {
-                /* Tính toán chiều rộng để có khoảng 3 item trên một dòng */
-                width: calc(33.333% - 20px);
-            }
-        }
-
-        /* Media query cho màn hình rất hẹp (ví dụ: chiều rộng tối đa 768px) */
-        @media (max-width: 768px) {
-            .item {
-                /* Hiển thị mỗi item trên một dòng */
-                width: calc(50% - 20px); /* Hiển thị 2 item trên một dòng cho màn hình nhỏ hơn nữa */
-            }
-        }
-
-        /* Media query cho màn hình rất rất hẹp (ví dụ: chiều rộng tối đa 576px) */
-        @media (max-width: 576px) {
-            .item {
-                /* Hiển thị mỗi item trên một dòng */
-                width: 100%;
-            }
-        }
-
-        .info {
-            display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
         }
-
-        .text {
-            margin-bottom: 10px;
+        .header img {
+            height: 40px;
         }
-
-        .btn_add {
-            margin-top: 10px;
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #ee4d2d;
+        }
+        .search-bar {
+            padding: 5px;
+            width: 300px;
+            border: 1px solid #ee4d2d;
+            border-radius: 5px;
+        }
+        .cart-container {
+            padding: 20px;
+        }
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        .cart-item-details {
+            flex: 1;
+        }
+        .cart-item-details p {
+            margin: 5px 0;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .quantity button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+        }
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+        }
+        .voucher-section {
+            background-color: #fff;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .voucher-section p {
+            margin: 5px 0;
+        }
+        .voucher-section a {
+            color: #ee4d2d;
+            text-decoration: none;
+        }
+        .voucher {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .shopee-voucher button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .shopee-coins {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer button {
+            background-color: #ee4d2d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
-
 <body>
-    <div class="Container">
-        <div class="header">
-            <div class="logo">
-                <img src="../IMG/logo.png" alt="Logo">
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../HTML/Home.html">Trang chủ</a></li>
-                    <li><a href="">Danh mục</a></li>
-                    <li><a href="#">Về chúng tôi</a></li>
-                </ul>
-            </nav>
-            <div class="search">
-                <button class="search-button">
-                    <i class="ti-search"></i>
-                </button>
-                <input class="input_search" type="text" placeholder="Tìm kiếm">
-                </a>
-            </div>
-            <div class="user-actions">
-                <ul>
-                    <li><a href=""><i class="icon_header ti-user"></i> Tài Khoản</a></li>
-                    <li><a href=""><i class="icon_header ti-shopping-cart"></i> Giỏ Hàng</a></li>
-                    <li><a href=""><i class="icon_header ti-bell"></i> Thông Báo</a></li>
-                </ul>
-            </div>
+    <div class="header">
+        <div>
+            <img src="https://via.placeholder.com/40" alt="Shopee Logo">
+            <h1>Giỏ Hàng</h1>
+        </div>
+        <input type="text" class="search-bar" placeholder="Săn voucher 4 triệu đồng">
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-header">
+            <span><input type="checkbox"> Sản Phẩm</span>
+            <span>Đơn Giá</span>
+            <span>Số Lượng</span>
+            <span>Số Tiền</span>
+            <span>Thao Tác</span>
         </div>
 
-        <div class="content">
-            <div class="filters">
-                <div class="filter-group">
-                    <h6>Giá</h6>
-                    <ul>
-                        <li><i class="ti-angle-right"></i><a href="#">Dưới 120 triệu</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">120 triệu - 250 triệu</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">250 triệu - 500 triệu</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">500 triệu - 1 tỷ 200 triệu</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-group">
-                    <h6>Size</h6>
-                    <ul>
-                        <li><i class="ti-angle-right"></i><a href="#">Dưới 36mm</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">36mm - dưới 38mm</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">38mm - dưới 40mm</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">40mm - dưới 42mm</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-group">
-                    <h6>Chất liệu</h6>
-                    <ul>
-                        <li><i class="ti-angle-right"></i><a href="#">Vàng hồng 18k</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">Thép</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">Titanium</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">Ceramic</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-group">
-                    <h6>Tình trạng</h6>
-                    <ul>
-                        <li><i class="ti-angle-right"></i><a href="#">Mới</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">Like New</a></li>
-                        <li><i class="ti-angle-right"></i><a href="#">Đã qua sử dụng</a></li>
-                    </ul>
-                </div>
+        <div class="cart-item">
+            <input type="checkbox">
+            <img src="https://via.placeholder.com/80" alt="Product Image">
+            <div class="cart-item-details">
+                <p>Bút Kẻ Mắt Nước JUDYDOLL 0.014mm Chọn...</p>
+                <p>Phân Loại Hàng: #03 Nâu trà</p>
+                <p><del>đ419,900</del> <strong>đ185,900</strong></p>
             </div>
-            <div class="product">
-                <div class="ds_trang_thai">
-                    <ul>
-                        <li><a href="">Nam</a></li>
-                        <li> <a href="">Nữ</a></li>
-                        <li> <a href="">Thể Thao</a></li>
-                        <li> <a href="">Tất Cả</a></li>
-                    </ul>
-                </div>
-                <div class="list_item">
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../IMG/sanpham/dm1.png" alt="">
-                        <h6>Audemars Piguet Code 11.59 LEVF</h6>
-                        <div class="info">
-                            <div class="text">
-                                <p> <del>9.977.900.000 VNĐ</del></p>
-                                <p>9.877.900.000 VNĐ</p>
-                            </div>
-                            <div class="btn_add">
-                                <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ
-                                    hàng</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="quantity">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
             </div>
+            <div>đ185,900</div>
+            <div><a href="#">Xóa</a></div>
+        </div>
+    </div>
+
+    <div class="voucher-section">
+        <p>Voucher giảm đến 47% <a href="#">Xem thêm voucher</a></p>
+        <p>Giảm ₫300.000 phí vận chuyển đơn tối thiểu ₫0; Giảm ₫500.000 phí vận chuyển đơn tối thiểu ₫500.000 <a href="#">Tìm hiểu thêm</a></p>
+        
+        <div class="shopee-voucher cart_accessibility_footer cart_accessibility_footer_voucher_row">
+            <span>Shopee Voucher</span>
+            <button>Chọn hoặc nhập mã</button>
         </div>
 
-        <div class="div-container footer">
-            <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
-            <div class="div-column">
-                <ul>
-                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
-                    <li><a href="#">Tìm đồng hồ Rolex của bạn</a></li>
-                    <li><a href="#">Câu nên Rolex của bạn</a></li>
-                    <li><a href="#">Đồng hồ nam</a></li>
-                    <li><a href="#">Đồng hồ nữ</a></li>
-                    <li><a href="#">Đồng hồ vàng</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
-                    <li><a href="#">Air-King</a></li>
-                    <li><a href="#">Cosmograph Daytona</a></li>
-                    <li><a href="#">Datejust</a></li>
-                    <li><a href="#">Lady-Datejust</a></li>
-                    <li><a href="#">Day-Date</a></li>
-                    <li><a href="#">Explorer</a></li>
-                    <li><a href="#">GMT-Master II</a></li>
-                    <li><a href="#">Oyster Perpetual</a></li>
-                    <li><a href="#">Sea-Dweller</a></li>
-                    <li><a href="#">Deepsea</a></li>
-                    <li><a href="#">Sky-Dweller</a></li>
-                    <li><a href="#">Submariner</a></li>
-                    <li><a href="#">Yacht-Master 1908</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Chế tạo đồng hồ</a></li>
-                    <li><a href="#">Cốt lõi của sự xuất sắc</a></li>
-                    <li><a href="#">Đằng sau con dấu</a></li>
-                    <li><a href="#">Khám phá Rolex</a></li>
-                </ul>
-            </div>
-            <div class="div-column">
-                <ul>
-                    <li class="text_title"><a href="#">Rolex và Thể thao</a></li>
-                    <li><a href="#">Bộ môn quân vợt</a></li>
-                    <li><a href="#">Bộ môn golf</a></li>
-                    <li><a href="#">Bộ môn đua thuyền</a></li>
-                    <li><a href="#">Bộ môn đua xe thể thao</a></li>
-                    <li><a href="#">Bộ môn cưỡi ngựa</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Những sáng kiến Perpetual</a></li>
-                    <li><a href="#">Chương trình Perpetual Planet</a></li>
-                    <li><a href="#">Chương trình Perpetual Arts Initiative</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Về Rolex</a></li>
-                    <li><a href="#">Tính bền vững</a></li>
-                    <li><a href="#">Phía sau vương miện</a></li>
-                    <li><a href="#">Lịch sử</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Mua một chiếc Rolex</a></li>
-                    <li><a href="#">Định vị cửa hàng</a></li>
-                    <li><a href="#">Mua một chiếc Rolex</a></li>
-                    <li><a href="#">Đồng hồ Pre-owned có chứng nhận của Rolex</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Dịch vụ chăm sóc và bảo dưỡng</a></li>
-                    <li><a href="#">Định vị trung tâm dịch vụ</a></li>
-                    <li><a href="#">Bảo dưỡng và Dịch vụ đồng hồ</a></li>
-                </ul>
-            </div>
-            <div class="div-column">
-                <ul>
-                    <li class="text_title"><a href="#">Dịch vụ</a></li>
-                    <li><a href="#">Những câu hỏi thường gặp</a></li>
-                    <li><a href="#">Danh sách yêu thích của bạn</a></li>
-                    <li><a href="#">Nộp báo cáo</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Thông báo pháp lý</a></li>
-                    <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Thông báo bảo mật</a></li>
-                    <li><a href="#">Cookie</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Khả năng truy cập</a></li>
-                    <li><a href="#">Đọc tuyên bố của chúng tôi</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Truyền thông</a></li>
-                    <li><a href="#">Giao diện</a></li>
-                    <li><a href="#">Ấn phẩm</a></li>
-                    <li><a href="#">Hướng dẫn sử dụng</a></li>
-                </ul>
-                <ul>
-                    <li class="text_title"><a href="#">Kênh chính thức</a></li>
-                    <li><a href="#"><i class="ti-youtube"></i>YouTube</a></li>
-                    <li><a href="#"><i class="ti-instagram"></i>Instagram</a></li>
-                    <li><a href="#"><i class="ti-twitter-alt"></i>Twitter</a></li>
-                    <li><a href="#"><i class="ti-facebook"></i>Facebook</a></li>
-                    <li><a href="#"><i class="ti-linkedin"></i>LinkedIn</a></li>
-                    <li><a href="#"><i class="ti-pinterest"></i>Pinterest</a></li>
-                </ul>
-            </div>
+        <div class="shopee-coins cart_accessibility_footer cart_accessibility_footer_coin_row">
+            <span>Shopee Xu</span>
+            <span>Bạn chưa chọn sản phẩm -₫0</span>
+        </div>
+    </div>
+
+    <div class="footer cart_accessibility_footer cart_accessibility_footer_checkout_row">
+        <div>
+            <input type="checkbox"> Chọn Tất Cả (2)
+            <a href="#">Xóa</a>
+            <a href="#">Lưu vào mục Đã thích</a>
+        </div>
+        <div>
+            Tổng cộng (0 Sản phẩm): ₫0
+            <button>Mua Hàng</button>
         </div>
     </div>
 </body>
-
 </html>

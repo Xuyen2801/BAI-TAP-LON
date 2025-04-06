@@ -1,15 +1,18 @@
-.baner img{
+.baner img {
     width: 100%;
 }
-body p{
+
+body p {
     color: black;
     text-align: justify;
 }
-h3{
+
+h3 {
     text-align: center;
     padding: 20px 0;
 }
-.ct_us{
+
+.ct_us {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
@@ -17,91 +20,129 @@ h3{
     justify-content: space-evenly;
     width: 100%;
 }
-.ct_item{
-    
+
+.ct_item {
+
     width: 100%;
     height: 500px;
     position: relative;
 }
-.tinh_ben{
+
+.tinh_ben {
     background-image: url(../IMG/tinhben.png);
     background-size: cover;
     margin-top: 40px;
 }
-.dau_an{
+
+.dau_an {
     background-image: url(../IMG/dauan.jpg);
     background-size: cover;
 }
-.lich_su{
+
+.lich_su {
     background-image: url(../IMG/líchu.png);
     background-size: cover;
 }
-.mau1{
+
+.mau1 {
     color: black !important;
 }
-.mau2{
+
+.mau2 {
     color: white !important;
 }
+
 .info {
-    
+
     position: absolute;
     top: 65%;
     left: 10%;
     width: 40%;
 }
-.info h6{
+
+.info h6 {
     font-size: 13px;
-    font-weight:350;
+    font-weight: 350;
 }
-a{
+
+a {
     color: rgb(110, 110, 110);
     text-decoration: none;
 }
+
 @media (max-width: 991px) {
     .ct_us {
         flex-direction: column;
     }
+
     .col-5 {
         width: 100%;
     }
+
     .ct_item {
         height: 180px;
     }
+
     .info {
         width: 70%;
         top: 40%;
     }
-    .content{
+
+    .content {
         padding-top: 50px;
         font-size: 10px;
     }
+
     .ct_us {
         margin-top: 0px;
         padding: 0 50px;
 
-}
+    }
 
 }
+
 @media (max-width: 400px) {
     .ct_us {
         flex-direction: column;
     }
+
     .col-5 {
         width: 100%;
     }
+
     .ct_item {
         height: 180px;
     }
+
     .info {
         width: 70%;
         top: 40%;
     }
-    .content{
+
+    .content {
         padding-top: 50px;
         font-size: 10px;
     }
+
     .ct_us {
         margin-top: 0px;
         padding: 0;
 
-}}
+    }
+        .ct_us {
+            margin: 0 auto;
+            padding: 0;
+        }
+        .h5, h5 {
+            font-size: 1rem;
+        }
+        .info h6 {
+            font-size: 10px;
+        }
+        .baner{
+            margin-top: 18px;
+        }
+        .baner img {
+            height: 180px;
+        }
+}

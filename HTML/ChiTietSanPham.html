@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/chitietsanpham.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+</head>
+<body>
+    <div class="Container">
+        <!-- Header -->
+        <div class="container-fluid p-0">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
+                    <!-- Logo -->
+                    <a class="navbar-brand logo" href="../HTML/Home.html">
+                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
+                    </a> 
+    
+                    <!-- Nút toggle cho mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="ti-menu"></i></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class="navbar-collapse menu" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DANH MỤC
+                                </a>
+                                <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=under120">DƯỚI 120 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=120to300">120 - 300 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=300to500">300 - 500 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=over500">TRÊN 500 TRIỆU</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#authModal">TÀI KHOẢN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/ThongBao.html">THÔNG BÁO</a>
+                            </li>
+                        </ul>
+    
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search">
+                            <button class="search-button">
+                                <i class="ti-search"></i>
+                            </button>
+                            <input class="input_search" type="text" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Chi tiết sản phẩm -->
+        <div class="product-detail">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="../IMG/sanpham/rolex-submariner.jpg" alt="Rolex Submariner" class="img-fluid">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="../IMG/sanpham/rolex-submariner-1.jpg" alt="Rolex Submariner" class="img-fluid">
+                    <img src="../IMG/sanpham/rolex-submariner-2.jpg" alt="Rolex Submariner" class="img-fluid">
+                    <img src="../IMG/sanpham/rolex-submariner-3.jpg" alt="Rolex Submariner" class="img-fluid">
+                    <img src="../IMG/sanpham/rolex-submariner-4.jpg" alt="Rolex Submariner" class="img-fluid">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Đồng Hồ Rolex Submariner 124060 Mặt Số Đen (Like New)</h1>
+                <div class="product-price">
+                    <span class="current-price">237.000.000VND</span>
+                </div>
+                <div class="product-specs">
+                    <div class="spec-item">
+                        <span>Size: 41mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Chất liệu: Thép</span>
+                    </div>
+                </div>
+                <div class="product-warranty">
+                    <p>Thẻ bảo hành: 03/2022 và dây rubber B đã qua sử dụng</p>
+                </div>
+                <div class="product-location">
+                    <p>Có sẵn tại showroom Hồ Chí Minh</p>
+                    <a href="#" class="view-map">Xem bản đồ</a>
+                </div>
+                <div class="product-hotline">
+                    <p>Hotline Miền Nam: 0375809812</p>
+                </div>
+                <div class="product-actions">
+                    <button class="contact-btn">Nhận tư vấn</button>
+                    <button class="buy-now">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mô tả sản phẩm -->
+        <div class="product-description">
+            <h2>Giới thiệu đồng hồ Rolex Submariner 124060 Mặt Số Đen (Like New)</h2>
+            <div class="description-content">
+                <p>Submariner là một bộ sưu tập đồng hồ chịu nước cực tốt của Rolex. Đây là một phát minh mới trong ngành đồng hồ. Với khả năng chịu nước tốt, những chiếc Submariner ra đời là để dành cho những người thợ lặn. Trong chuyến mục giới thiệu về đồng hồ hôm nay, Gia Bảo Luxury sẽ giới thiệu đến quý vị một siêu phẩm mới có thể chịu nước ở độ sâu 300m. Siêu phẩm mang tên Đồng Hồ Rolex Submariner 124060 Mặt Số Đen.</p>
+            
+                <h3>Thông số kỹ thuật</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Thương hiệu</th>
+                        <td>Rolex</td>
+                    </tr>
+                    <tr>
+                        <th>Model</th>
+                        <td>Submariner 124060</td>
+                    </tr>
+                    <tr>
+                        <th>Xuất xứ</th>
+                        <td>Thụy Sỹ</td>
+                    </tr>
+                    <tr>
+                        <th>Năm sản xuất</th>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <th>Bộ máy</th>
+                        <td>Calibre 3230, Self-winding mechanical movement</td>
+                    </tr>
+                    <tr>
+                        <th>Dự trữ năng lượng</th>
+                        <td>70 giờ</td>
+                    </tr>
+                    <tr>
+                        <th>Chất liệu vỏ</th>
+                        <td>Oystersteel (904L)</td>
+                    </tr>
+                    <tr>
+                        <th>Đường kính</th>
+                        <td>41mm</td>
+                    </tr>
+                    <tr>
+                        <th>Độ dày</th>
+                        <td>12.5mm</td>
+                    </tr>
+                    <tr>
+                        <th>Mặt số</th>
+                        <td>Đen, dạ quang Chromalight</td>
+                    </tr>
+                    <tr>
+                        <th>Dây đeo</th>
+                        <td>Oystersteel, khóa Oysterlock</td>
+                    </tr>
+                    <tr>
+                        <th>Chống nước</th>
+                        <td>300m (1000ft)</td>
+                    </tr>
+                    <tr>
+                        <th>Chức năng</th>
+                        <td>Giờ, phút, giây, vành bezel xoay một chiều</td>
+                    </tr>
+                </table>
+                
+                <h3>Cải tiến hoàn toàn mới</h3>
+                <p>Đồng Hồ Rolex Submariner 124060 Mặt Số Đen là một siêu phẩm hoàn toàn mới trong bộ sưu tập đồng hồ Submariner của Rolex. Những chiếc Submariner phiên bản 2020 có những cải tiến từ cỗ máy bên trong cho đến hình dáng bên ngoài.</p>
+                
+                <h3>Về cỗ máy</h3>
+                <p>Cỗ máy hoạt động bên trong của chiếc Rolex Submariner này cũng được cải tiến một cách đáng kể so với phiên bản trước đó. So với phiên bản Caliber 3135 trước đó thì phiên bản Caliber 3230 mang đến cho người dùng nhiều tính năng hữu ích hơn. Cỗ máy được xây dựng trên cơ cấu thoát Chronergy độc quyền của Rolex, với khả năng trữ cót cao lên đến 70 giờ.</p>
+                
+                <h3>Thiết kế dành cho những thợ lặn</h3>
+                <p>Với thiết kế chuyên biệt dành cho các thợ lặn chuyên nghiệp, Rolex Submariner 124060 được trang bị khả năng chống nước ấn tượng lên đến 300m. Vành bezel xoay một chiều với độ chính xác cao giúp người đeo dễ dàng theo dõi thời gian lặn của mình.</p>
+                <div class="description-gradient"></div>
+            </div>
+            <button class="show-more-btn">
+                Xem thêm
+                <i class="ti-angle-down"></i>
+            </button>
+        </div>
+
+        <!-- Đánh giá sản phẩm -->
+        <div class="product-reviews">
+            <div class="reviews-header">
+                <h3 class="reviews-title">
+                    Đánh giá sản phẩm
+                    <span class="reviews-count">(128 đánh giá)</span>
+                </h3>
+            </div>
+
+            <div class="sales-info">
+                <span class="sales-count">Đã bán 1,234 sản phẩm</span>
+            </div>
+
+            <div class="product-rating">
+                <div class="rating-score">4.8</div>
+                <div class="rating-stars">
+                    ★★★★★
+                </div>
+                <div class="rating-stats">
+                    <div class="rating-bar">
+                        <span class="bar-label">5★</span>
+                        <div class="bar-fill"><div style="width: 80%"></div></div>
+                        <span class="bar-count">96</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="bar-label">4★</span>
+                        <div class="bar-fill"><div style="width: 15%"></div></div>
+                        <span class="bar-count">24</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="bar-label">3★</span>
+                        <div class="bar-fill"><div style="width: 4%"></div></div>
+                        <span class="bar-count">5</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="bar-label">2★</span>
+                        <div class="bar-fill"><div style="width: 1%"></div></div>
+                        <span class="bar-count">2</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="bar-label">1★</span>
+                        <div class="bar-fill"><div style="width: 0%"></div></div>
+                        <span class="bar-count">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-list">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="../IMG/avatar1.jpg" alt="User Avatar">
+                            </div>
+                            <div>
+                                <div class="reviewer-name">Nguyễn Văn A</div>
+                                <div class="review-date">20/03/2024</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                    <div class="review-content">
+                        Đồng hồ rất đẹp, chất lượng tuyệt vời. Đóng gói cẩn thận, giao hàng nhanh. Rất hài lòng với sản phẩm!
+                    </div>
+                    <div class="review-images">
+                        <img src="../IMG/review1.jpg" alt="Review Image 1">
+                        <img src="../IMG/review2.jpg" alt="Review Image 2">
+                        <img src="../IMG/review3.jpg" alt="Review Image 3">
+                    </div>
+                    <div class="review-actions">
+                        <button><i class="ti-thumb-up"></i> Hữu ích (24)</button>
+                        <button><i class="ti-comment"></i> Trả lời</button>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="../IMG/avatar2.jpg" alt="User Avatar">
+                            </div>
+                            <div>
+                                <div class="reviewer-name">Trần Thị B</div>
+                                <div class="review-date">18/03/2024</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                    <div class="review-content">
+                        Sản phẩm chính hãng, đẹp như mong đợi. Nhân viên tư vấn nhiệt tình, chuyên nghiệp.
+                    </div>
+                    <div class="review-images">
+                        <img src="../IMG/review4.jpg" alt="Review Image 4">
+                        <img src="../IMG/review5.jpg" alt="Review Image 5">
+                    </div>
+                    <div class="review-actions">
+                        <button><i class="ti-thumb-up"></i> Hữu ích (15)</button>
+                        <button><i class="ti-comment"></i> Trả lời</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="div-container footer">
+            <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="../HTML/DanhMucSanPham.html?category=rolex">Đồng hồ Rolex</a></li>
+                    <li><a href="../HTML/TimKiem.html?brand=rolex">Tìm đồng hồ Rolex của bạn</a></li>
+                    <li><a href="../HTML/DanhMucSanPham.html?gender=nam">Đồng hồ nam</a></li>
+                    <li><a href="../HTML/DanhMucSanPham.html?gender=nu">Đồng hồ nữ</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="../HTML/DanhMucSanPham.html?brand=rolex">Đồng hồ Rolex</a></li>
+                    <li><a href="../HTML/SanPham.html?id=daytona">Cosmograph Daytona</a></li>
+                    <li><a href="../HTML/SanPham.html?id=datejust">Datejust</a></li>
+                    <li><a href="../HTML/SanPham.html?id=explorer">Explorer</a></li>
+                    <li><a href="../HTML/SanPham.html?id=submariner">Submariner</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="../HTML/TheThao.html">Rolex và Thể thao</a></li>
+                    <li><a href="../HTML/TheThao.html#golf">Bộ môn golf</a></li>
+                    <li><a href="../HTML/TheThao.html#duathuyen">Bộ môn đua thuyền</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="../HTML/About.html">Về Rolex</a></li>
+                    <li><a href="../HTML/About.html#benvung">Tính bền vững</a></li>
+                    <li><a href="../HTML/About.html#lichsu">Lịch sử</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="../HTML/CuaHang.html">Mua một chiếc Rolex</a></li>
+                    <li><a href="../HTML/CuaHang.html#timcuahang">Định vị cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="../HTML/DichVu.html">Dịch vụ</a></li>
+                    <li><a href="../HTML/FAQ.html">Những câu hỏi thường gặp</a></li>
+                    <li><a href="../HTML/TinTuc.html">Tin tức</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="../HTML/LienHe.html">Kênh chính thức</a></li>
+                    <li><a href="https://youtube.com/etech247"><i class="ti-youtube"></i>YouTube</a></li>
+                    <li><a href="https://instagram.com/etech247"><i class="ti-instagram"></i>Instagram</a></li>
+                    <li><a href="https://facebook.com/etech247"><i class="ti-facebook"></i>Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/chitietsanpham.js"></script>
+</body>
+</html> 

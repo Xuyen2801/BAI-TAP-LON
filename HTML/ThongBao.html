@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/thongbao.css">
+    <link rel="stylesheet" href="../icon/themify-icons-font/themify-icons/themify-icons.css" />
+    <link rel="icon" href="../IMG/logo_http-removebg-preview.png" type="image/x-icon">
+    <title>Thông Báo</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="container-fluid p-0">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
+                    <!-- Logo -->
+                    <a class="navbar-brand logo" href="../HTML/Home.html">
+                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
+                    </a> 
+    
+                    <!-- Nút toggle cho mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="ti-menu"></i></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class=" navbar-collapse menu" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DANH MỤC
+                                </a>
+                                <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=under120">DƯỚI 120 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=120to300">120 - 300 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=300to500">300 - 500 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=over500">TRÊN 500 TRIỆU</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/TaiKhoan.html">TÀI KHOẢN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../HTML/ThongBao.html">THÔNG BÁO</a>
+                            </li>
+                        </ul>
+    
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search">
+                            <button class="search-button">
+                                <i class="ti-search"></i>
+                            </button>
+                            <input class="input_search" type="text" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div class="notification-container">
+            <div class="notification-header">
+                <h1>Thông Báo</h1>
+                <div class="notification-tabs">
+                    <button class="tab-btn active" data-target="all-notifications">Tất Cả</button>
+                    <button class="tab-btn" data-target="orders-section">Đơn Hàng</button>
+                    <button class="tab-btn" data-target="promotions-section">Khuyến Mãi</button>
+                    <button class="tab-btn" data-target="news-section">Tin Tức</button>
+                </div>
+            </div>
+
+            <div class="notification-content">
+                <!-- Thông báo đơn hàng -->
+                <div class="notification-section" id="orders-section">
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Đơn hàng #DH123456 đã được xác nhận</h3>
+                            <p>Đơn hàng của bạn đã được xác nhận và đang được chuẩn bị để giao hàng.</p>
+                            <span class="notification-time">10 phút trước</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="ti-truck"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Đơn hàng #DH123455 đang được giao</h3>
+                            <p>Đơn hàng của bạn đang được vận chuyển, dự kiến giao trong 2 ngày tới.</p>
+                            <span class="notification-time">2 giờ trước</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông báo khuyến mãi -->
+                <div class="notification-section" id="promotions-section">
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="ti-gift"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Khuyến mãi đặc biệt tháng 12</h3>
+                            <p>Giảm giá 20% cho tất cả sản phẩm đồng hồ Rolex trong tháng 12.</p>
+                            <span class="notification-time">1 ngày trước</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="ti-ticket"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Voucher giảm giá 5 triệu</h3>
+                            <p>Nhận ngay voucher giảm giá 5 triệu cho đơn hàng từ 50 triệu.</p>
+                            <span class="notification-time">3 ngày trước</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông báo tin tức -->
+                <div class="notification-section" id="news-section">
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="ti-announcement"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Rolex ra mắt bộ sưu tập mới 2024</h3>
+                            <p>Khám phá bộ sưu tập đồng hồ Rolex mới nhất với thiết kế đột phá.</p>
+                            <span class="notification-time">5 ngày trước</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="ti-calendar"></i>
+                        </div>
+                        <div class="notification-details">
+                            <h3>Sự kiện triển lãm đồng hồ quốc tế</h3>
+                            <p>Tham gia sự kiện triển lãm đồng hồ quốc tế tại TP.HCM vào tháng 1/2024.</p>
+                            <span class="notification-time">1 tuần trước</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-container footer">
+            <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
+                    <li><a href="#">Tìm đồng hồ Rolex của bạn</a></li>
+                    <li><a href="#">Đồng hồ nam</a></li>
+                    <li><a href="#">Đồng hồ nữ</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
+                    <li><a href="#">Cosmograph Daytona</a></li>
+                    <li><a href="#">Datejust</a></li>
+                    <li><a href="#">Explorer</a></li>
+                    <li><a href="#">Submariner</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Rolex và Thể thao</a></li>
+                    <li><a href="#">Bộ môn golf</a></li>
+                    <li><a href="#">Bộ môn đua thuyền</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Về Rolex</a></li>
+                    <li><a href="#">Tính bền vững</a></li>
+                    <li><a href="#">Lịch sử</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Mua một chiếc Rolex</a></li>
+                    <li><a href="#">Định vị cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Kênh chính thức</a></li>
+                    <li><a href="#"><i class="ti-youtube"></i>YouTube</a></li>
+                    <li><a href="#"><i class="ti-instagram"></i>Instagram</a></li>
+                    <li><a href="#"><i class="ti-facebook"></i>Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarNav');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+    <script src="../JS/thongbao.js"></script>
+</body>
+</html> 

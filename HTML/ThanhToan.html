@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/thanhtoan.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="container-fluid p-0">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
+                    <!-- Logo -->
+                    <a class="navbar-brand logo" href="#">
+                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
+                    </a> 
+    
+                    <!-- Nút toggle cho mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="ti-menu"></i></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class="navbar-collapse menu" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../HTML/Danh mục sản phẩm.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DANH MỤC
+                                </a>
+                                <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">ĐỒNG HỒ NAM</a></li>
+                                    <li><a class="dropdown-item" href="#">ĐỒNG HỒ NỮ</a></li>
+                                    <li><a class="dropdown-item" href="#">ĐỒNG HỒ THỂ THAO</a></li>
+                                    <li><a class="dropdown-item" href="#">TẤT CẢ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">TÀI KHOẢN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">THÔNG BÁO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div class="payment-container">
+            <div class="payment-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Giỏ hàng</span>
+                </div>
+                <div class="step active">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Thanh toán</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Hoàn tất</span>
+                </div>
+            </div>
+
+            <div class="payment-content">
+                <div class="payment-info">
+                    <h4>Thông tin đơn hàng</h4>
+                    <div id="payment-items">
+                        <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+                    </div>
+                    <div class="payment-total">
+                        <div class="total-row">
+                            <span>Tổng tiền hàng:</span>
+                            <span id="payment-subtotal">0 VNĐ</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Phí vận chuyển:</span>
+                            <span id="payment-shipping">30.000 VNĐ</span>
+                        </div>
+                        <div class="total-row total">
+                            <span>Tổng thanh toán:</span>
+                            <span id="payment-total">0 VNĐ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-form">
+                    <h4>Thông tin giao hàng</h4>
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Phương thức thanh toán</label>
+                            <select id="paymentMethod" required>
+                                <option value="">Chọn phương thức thanh toán</option>
+                                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                                <option value="online">Thanh toán online</option>
+                            </select>
+                        </div>
+                        <div id="onlinePaymentInfo" class="online-payment">
+                            <h5>Thông tin thanh toán online</h5>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" name="onlineMethod" id="bankTransfer" value="bank">
+                                    <label for="bankTransfer">
+                                        <i class="ti-money"></i>
+                                        Chuyển khoản ngân hàng
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="onlineMethod" id="creditCard" value="card">
+                                    <label for="creditCard">
+                                        <i class="ti-credit-card"></i>
+                                        Thẻ tín dụng/Ghi nợ
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="payment-note">
+                                <p><strong>Lưu ý:</strong> Sau khi xác nhận đơn hàng, bạn sẽ được chuyển đến trang thanh toán của đối tác.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Ghi chú</label>
+                            <textarea id="note" rows="2"></textarea>
+                        </div>
+                        <div class="payment-actions">
+                            <button type="button" class="btn-back" onclick="window.location.href='GioHang.html'">Quay lại giỏ hàng</button>
+                            <button type="submit" class="btn-pay">Thanh toán</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-container footer">
+            <img class="logo_footer" src="../IMG/logo.png" alt="Logo Etech247">
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
+                    <li><a href="#">Tìm đồng hồ Rolex của bạn</a></li>
+                    <li><a href="#">Đồng hồ nam</a></li>
+                    <li><a href="#">Đồng hồ nữ</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Đồng hồ Rolex</a></li>
+                    <li><a href="#">Cosmograph Daytona</a></li>
+                    <li><a href="#">Datejust</a></li>
+                    <li><a href="#">Explorer</a></li>
+                    <li><a href="#">Submariner</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Rolex và Thể thao</a></li>
+                    <li><a href="#">Bộ môn golf</a></li>
+                    <li><a href="#">Bộ môn đua thuyền</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Về Rolex</a></li>
+                    <li><a href="#">Tính bền vững</a></li>
+                    <li><a href="#">Lịch sử</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Mua một chiếc Rolex</a></li>
+                    <li><a href="#">Định vị cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="div-column">
+                <ul>
+                    <li class="text_title"><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                </ul>
+                <ul>
+                    <li class="text_title"><a href="#">Kênh chính thức</a></li>
+                    <li><a href="#"><i class="ti-youtube"></i>YouTube</a></li>
+                    <li><a href="#"><i class="ti-instagram"></i>Instagram</a></li>
+                    <li><a href="#"><i class="ti-facebook"></i>Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/thanhtoan.js"></script>
+</body>
+</html> 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/taikhoan.css">
+    <link rel="stylesheet" href="../icon/themify-icons-font/themify-icons/themify-icons.css" />
+    <link rel="icon" href="../IMG/logo_http-removebg-preview.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Khoản</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="container-fluid p-0">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
+                    <!-- Logo -->
+                    <a class="navbar-brand logo" href="../HTML/Home.html">
+                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
+                    </a> 
+    
+                    <!-- Nút toggle cho mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="ti-menu"></i></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class="navbar-collapse menu" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../HTML/DanhMucSanPham.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DANH MỤC
+                                </a>
+                                <ul class="dropdown-menu menu_Cap2" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=under120">DƯỚI 120 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=120to300">120 - 300 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=300to500">300 - 500 TRIỆU</a></li>
+                                    <li><a class="dropdown-item" href="../HTML/DanhMucSanPham.html?price=over500">TRÊN 500 TRIỆU</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../HTML/TaiKhoan.html">TÀI KHOẢN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML/ThongBao.html">THÔNG BÁO</a>
+                            </li>
+                        </ul>
+    
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search">
+                            <button class="search-button">
+                                <i class="ti-search"></i>
+                            </button>
+                            <input class="input_search" type="text" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div class="account-container">
+            <div class="account-sidebar">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Avatar">
+                    </div>
+                    <div class="user-name">Nguyễn Văn A</div>
+                    <div class="user-edit">
+                        <a href="#"><i class="ti-pencil"></i> Sửa hồ sơ</a>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <div class="menu-item active">
+                        <i class="ti-user"></i>
+                        <span>Tài khoản của tôi</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="ti-shopping-cart"></i>
+                        <span>Đơn mua</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="ti-bell"></i>
+                        <span>Thông báo</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="ti-wallet"></i>
+                        <span>Ví của tôi</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="ti-heart"></i>
+                        <span>Sản phẩm yêu thích</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="ti-settings"></i>
+                        <span>Cài đặt</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-content">
+                <div class="content-section">
+                    <h2>Hồ sơ của tôi</h2>
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label>Tên đăng nhập</label>
+                            <input type="text" value="nguyenvana" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Tên</label>
+                            <input type="text" value="Nguyễn Văn A">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="nguyenvana@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <input type="tel" value="0123456789">
+                        </div>
+                        <div class="form-group">
+                            <label>Giới tính</label>
+                            <div class="gender-options">
+                                <label><input type="radio" name="gender" checked> Nam</label>
+                                <label><input type="radio" name="gender"> Nữ</label>
+                                <label><input type="radio" name="gender"> Khác</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày sinh</label>
+                            <input type="date" value="1990-01-01">
+                        </div>
+                        <button class="save-button">Lưu thay đổi</button>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Địa chỉ</h2>
+                    <div class="address-list">
+                        <div class="address-item">
+                            <div class="address-header">
+                                <span class="address-name">Nguyễn Văn A</span>
+                                <span class="address-phone">0123456789</span>
+                            </div>
+                            <div class="address-detail">
+                                123 Đường ABC, Phường XYZ, Quận 1, TP.HCM
+                            </div>
+                            <div class="address-actions">
+                                <button class="edit-button">Sửa</button>
+                                <button class="delete-button">Xóa</button>
+                            </div>
+                        </div>
+                        <button class="add-address-button">
+                            <i class="ti-plus"></i> Thêm địa chỉ mới
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Đổi mật khẩu</h2>
+                    <div class="password-form">
+                        <div class="form-group">
+                            <label>Mật khẩu hiện tại</label>
+                            <input type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>Mật khẩu mới</label>
+                            <input type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>Xác nhận mật khẩu mới</label>
+                            <input type="password">
+                        </div>
+                        <button class="save-button">Đổi mật khẩu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-container footer">
+            <!-- Footer content giống như các trang khác -->
+        </div>
+    </div>
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.navbar-toggler');
+        const menu = document.getElementById('navbarNav');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('show'); // Khi click vào nút thì toggle class 'show' cho menu
+        });
+    </script>
+    <script src="../JS/taikhoan.js"></script>
+</body>
+</html> 

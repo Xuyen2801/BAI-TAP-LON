@@ -11,20 +11,8 @@
 </head>
 <body>
     <div class="Container">
-        <div class="container-fluid p-0">
-            <header class="header">
-                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--mau-Nen);">
-                    <!-- Logo -->
-                    <a class="navbar-brand logo" href="../HTML/Home.html">
-                        <img src="../IMG/logo.png" alt="Logo" class="img-fluid">
-                    </a> 
-    
-                    <!-- Nút toggle cho mobile -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i class="ti-menu"></i></span>
-                    </button>
-                    <!-- Menu -->
-                    <div class="navbar-collapse menu" id="navbarNav">
+        <div class="navbar-collapse menu" id="navbarNav">
+                        <div class="navbar-collapse menu" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="../HTML/Home.html">TRANG CHỦ</a>
@@ -44,7 +32,7 @@
                                 <a class="nav-link" href="../HTML/About.html">VỀ CHÚNG TÔI</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#authModal">TÀI KHOẢN</a>
+                                <a class="nav-link" href="../HTML/TaiKhoan.html" data-bs-toggle="modal" data-bs-target="#authModal">TÀI KHOẢN</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../HTML/GioHang.html">GIỎ HÀNG</a>
@@ -62,9 +50,15 @@
                             <input class="input_search" type="text" placeholder="Tìm kiếm">
                         </div>
                     </div>
-                </nav>
-            </header>
-        </div>
+    
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search">
+                            <button class="search-button">
+                                <i class="ti-search"></i>
+                            </button>
+                            <input class="input_search" type="text" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
 
         <!-- Modal Đăng nhập/Đăng ký -->
         <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">

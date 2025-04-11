@@ -13,10 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // Ẩn tất cả các form
-            authForms.forEach(form => form.classList.remove('active'));
+            authForms.forEach(form => {
+                form.classList.remove('active');
+                form.style.display = 'none';
+            });
+            
             // Hiển thị form tương ứng
             const formId = this.getAttribute('data-tab') + '-form';
-            document.getElementById(formId).classList.add('active');
+            const targetForm = document.getElementById(formId);
+            targetForm.style.display = 'block';
+            setTimeout(() => {
+                targetForm.classList.add('active');
+            }, 10);
         });
     });
 
